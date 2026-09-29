@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-<!--Autor: [Victor Junkes] - Criado em 21/09/2026-->
+<!--Autor: Victor Junkes - Criado em 21/09/2026-->
 
     <h1>Atividade 1 - Flexbox Froggy</h1>
 
@@ -40,62 +40,53 @@
         <caption><strong>Resumo de todos os níveis jogados</strong></caption>
         <thead><tr><th>Nível</th><th>Propriedade(s) CSS</th><th>Resultado</th></tr></thead>
         <tbody>
-            <tr><td>1</td><td><code>justify-content: flex-end;</code></td><td>Alinha os sapos ao final do eixo principal (direita).</td></tr>
-            <tr><td>2</td><td><code>justify-content: center;</code></td><td>Centraliza os sapos no eixo principal.</td></tr>
-            <tr><td>3</td><td><code>justify-content: space-around;</code></td><td>Distribui os sapos com espaço igual ao redor de cada um.</td></tr>
-            <tr><td>4</td><td><code>justify-content: space-between;</code></td><td>Distribui os sapos com espaço igual apenas entre eles (sem espaço nas bordas).</td></tr>
-            <tr><td>5</td><td><code>flex-direction: row-reverse;</code></td><td>Inverte a ordem dos sapos no eixo principal.</td></tr>
-            <tr><td>6</td><td><code>flex-direction: column;</code></td><td>Muda o eixo principal para vertical, empilhando os sapos.</td></tr>
-            <tr><td>7</td><td><code>flex-direction: column-reverse;</code></td><td>Eixo vertical invertido (de baixo para cima).</td></tr>
-            <tr><td>8</td><td><code>align-items: flex-end;</code></td><td>Alinha os sapos ao final do eixo transversal (embaixo).</td></tr>
-            <tr><td>9</td><td><code>align-items: center;</code></td><td>Centraliza os sapos no eixo transversal.</td></tr>
-            <tr><td>10</td><td><code>flex-wrap: wrap;</code></td><td>Permite que os sapos quebrem para a linha de baixo quando não cabem mais.</td></tr>
-            <tr><td>11</td><td><code>align-content: flex-start;</code></td><td>Com várias linhas (wrap), agrupa as linhas no início do eixo transversal.</td></tr>
-            <tr><td>12</td><td><code>align-content: space-between;</code></td><td>Distribui as linhas com espaço igual entre elas (sem sobra nas pontas).</td></tr>
-            <tr><td>13</td><td><code>align-self: flex-end;</code></td><td>Sobrescreve o alinhamento de um único item específico, jogando-o para o final do eixo transversal.</td></tr>
-            <tr><td>14</td><td><code>order: 1;</code> (por sapo)</td><td>Reordena visualmente os itens sem mudar o HTML.</td></tr>
-            <tr><td>15</td><td><code>flex-direction: row-reverse; flex-wrap: wrap-reverse;</code></td><td>Combina inversão de direção com quebra de linha invertida.</td></tr>
-            <tr><td>16</td><td><code>align-content: center;</code></td><td>Centraliza o bloco de linhas no eixo transversal.</td></tr>
-            <tr><td>17</td><td><code>flex-grow: 1;</code> (em um item)</td><td>Faz um item específico crescer e ocupar o espaço livre restante.</td></tr>
-            <tr><td>18</td><td><code>flex-grow</code> com valores diferentes por item</td><td>Divide o espaço livre proporcionalmente entre os itens, conforme o valor de cada um.</td></tr>
-            <tr><td>19</td><td><code>flex-shrink</code></td><td>Controla o quanto cada item pode encolher quando falta espaço na linha.</td></tr>
-            <tr><td>20</td><td><code>flex-basis</code></td><td>Define o tamanho inicial de um item antes de crescer/encolher.</td></tr>
-            <tr><td>21</td><td><code>flex: grow shrink basis;</code> (atalho)</td><td>Combina as três propriedades acima em uma única declaração.</td></tr>
-            <tr><td>22</td><td><code>flex-flow: row wrap; justify-content: space-around; align-content: space-between;</code></td><td>Desafio final combinando direção, quebra de linha e alinhamentos.</td></tr>
-            <tr><td>23</td><td><code>order</code> + <code>align-self</code> combinados</td><td>Reposiciona e realinha itens individualmente no desafio final.</td></tr>
-            <tr><td>24</td><td><code>flex-flow</code>, <code>justify-content</code>, <code>align-items</code> combinados</td><td>Último nível: junta tudo o que foi aprendido para reproduzir o layout final do jogo.</td></tr>
+            <tr><td>1</td><td><code>justify-content: flex-end;</code></td><td>Empurra os sapos para o final do eixo principal (direita).</td></tr>
+            <tr><td>2</td><td><code>justify-content: center;</code></td><td>Centraliza os sapos na horizontal.</td></tr>
+            <tr><td>3</td><td><code>justify-content: space-around;</code></td><td>Espaço igual em volta de cada sapo.</td></tr>
+            <tr><td>4</td><td><code>justify-content: space-between;</code></td><td>Espaço só entre os sapos, nenhum nas pontas.</td></tr>
+            <tr><td>5</td><td><code>align-items: flex-end;</code></td><td>Leva os sapos para baixo (final do eixo transversal).</td></tr>
+            <tr><td>6</td><td><code>justify-content: center; align-items: center;</code></td><td>Centro nos dois eixos.</td></tr>
+            <tr><td>7</td><td><code>justify-content: space-around; align-items: flex-end;</code></td><td>Espaçados na horizontal e embaixo.</td></tr>
+            <tr><td>8</td><td><code>flex-direction: row-reverse;</code></td><td>Inverte a ordem dos sapos na linha.</td></tr>
+            <tr><td>9</td><td><code>flex-direction: column;</code></td><td>Eixo principal vira vertical, um sapo embaixo do outro.</td></tr>
+            <tr><td>10</td><td><code>flex-direction: row-reverse; justify-content: flex-end;</code></td><td>Com row-reverse o flex-end fica na esquerda.</td></tr>
+            <tr><td>11</td><td><code>flex-direction: column; justify-content: flex-end;</code></td><td>Em coluna, o justify-content mexe na vertical.</td></tr>
+            <tr><td>12</td><td><code>flex-direction: column-reverse; justify-content: space-between;</code></td><td>Coluna invertida com espaço entre os sapos.</td></tr>
+            <tr><td>13</td><td><code>flex-direction: row-reverse; justify-content: center; align-items: flex-end;</code></td><td>Invertido, centralizado e embaixo.</td></tr>
+            <tr><td>14</td><td><code>order: 1; (sapo amarelo)</code></td><td>Manda um sapo para depois dos outros sem mexer no HTML.</td></tr>
+            <tr><td>15</td><td><code>order: -1; (sapo vermelho)</code></td><td>Valor negativo coloca o sapo antes de todos.</td></tr>
+            <tr><td>16</td><td><code>align-self: flex-end; (sapo amarelo)</code></td><td>Alinha só um sapo, ignorando o align-items do pai.</td></tr>
+            <tr><td>17</td><td><code>order: 1; align-self: flex-end; (sapos amarelos)</code></td><td>Junta ordem e alinhamento individual.</td></tr>
+            <tr><td>18</td><td><code>flex-wrap: wrap;</code></td><td>Deixa os sapos quebrarem para a linha de baixo.</td></tr>
+            <tr><td>19</td><td><code>flex-direction: column; flex-wrap: wrap;</code></td><td>Colunas que quebram para o lado.</td></tr>
+            <tr><td>20</td><td><code>flex-flow: column wrap;</code></td><td>Atalho de flex-direction + flex-wrap.</td></tr>
+            <tr><td>21</td><td><code>align-content: flex-start;</code></td><td>Junta as linhas no começo do eixo transversal.</td></tr>
+            <tr><td>22</td><td><code>align-content: flex-end;</code></td><td>Junta as linhas no final.</td></tr>
+            <tr><td>23</td><td><code>flex-direction: column-reverse; align-content: center;</code></td><td>Coluna invertida com as linhas no centro.</td></tr>
+            <tr><td>24</td><td><code>flex-flow: column-reverse wrap-reverse; justify-content: center; align-content: space-between;</code></td><td>Último nível: mistura tudo.</td></tr>
         </tbody>
     </table>
 
     <h2>Explicação detalhada de 2 níveis acima do nível 10</h2>
 
-    <h3>Nível 13 - <code>align-self</code></h3>
+    <h3>Nível 16 - <code>align-self</code></h3>
     <p>
-        Esse nível usa a propriedade <code>align-self</code>, aplicada diretamente em <em>um único item
-        flexível</em> (o sapo), e não no contêiner (a lagoa). Todas as outras propriedades de
-        alinhamento como <code>align-items</code> são declaradas no pai e afetam todos os filhos ao
-        mesmo tempo; já <code>align-self</code> permite que um item específico "desobedeça" ao
-        alinhamento geral definido pelo <code>align-items</code> do contêiner e tenha seu próprio
-        alinhamento no eixo transversal. No nível, o contêiner usa <code>align-items: center;</code> para
-        centralizar a maioria dos sapos verticalmente, mas um dos sapos precisa ficar encostado embaixo,
-        então esse item recebe individualmente <code>align-self: flex-end;</code>, sobrescrevendo apenas
-        o seu próprio alinhamento sem afetar os demais.
+        Nesse nível quase todos os sapos já estão no lugar certo por causa do <code>align-items</code> do
+        contêiner (a lagoa), mas o sapo amarelo precisa ir para baixo sozinho. Para isso a propriedade vai
+        direto no item: <code>align-self: flex-end;</code>. O <code>align-items</code> fica no pai e vale
+        para todos os filhos; o <code>align-self</code> fica no filho e sobrescreve o alinhamento só dele,
+        no eixo transversal. Os outros sapos continuam onde estavam.
     </p>
 
-    <h3>Nível 18 - <code>flex-grow</code> com valores diferentes</h3>
+    <h3>Nível 20 - <code>flex-flow: column wrap;</code></h3>
     <p>
-        Diferente do nível 17 (onde só um item recebe <code>flex-grow: 1</code> e absorve sozinho todo o
-        espaço sobrando), esse nível pede para que <em>vários</em> sapos cresçam ao mesmo tempo, mas em
-        proporções diferentes. O valor de <code>flex-grow</code> funciona como um "peso": se um sapo tem
-        <code>flex-grow: 1</code> e outro tem <code>flex-grow: 2</code>, o espaço livre da lagoa (o que
-        sobra depois de acomodar o tamanho natural de cada item) é dividido em partes proporcionais a
-        esses pesos - o segundo sapo cresce o dobro do primeiro. É importante entender que
-        <code>flex-grow</code> não define um tamanho fixo, e sim uma "fatia" do espaço extra disponível,
-        o que é bem diferente de simplesmente definir uma largura em pixels ou porcentagem para cada
-        item.
+        O nível 19 foi resolvido com duas propriedades (<code>flex-direction: column;</code> e
+        <code>flex-wrap: wrap;</code>). O nível 20 pede a mesma coisa usando uma linha só, e para isso
+        existe o atalho <code>flex-flow</code>: o primeiro valor é a direção e o segundo é o wrap. Com
+        <code>column</code> os sapos ficam um embaixo do outro, e com <code>wrap</code>, quando a coluna
+        enche, eles continuam numa nova coluna ao lado em vez de ficarem espremidos.
     </p>
 
-    <p><sub>obs.: tabela construída como registro de estudo após jogar todos os níveis do jogo.</sub></p>
 
 </body>
 </html>

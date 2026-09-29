@@ -17,7 +17,3 @@ Romulo Beninca.
 
 Abra qualquer um dos arquivos `.html` diretamente no navegador, ou acesse pelo GitHub Pages depois de
 publicado.
-
-## Comentário sobre a experiência
-
-[Escreva aqui o que você achou de fazer essa lista.]

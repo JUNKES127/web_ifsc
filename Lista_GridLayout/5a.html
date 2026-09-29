@@ -90,31 +90,14 @@
             color: #222;
             text-align: center;
         }
-
-        /* Abaixo de 600px: todos os tópicos viram uma lista vertical, um sobre o outro */
-        @media (max-width: 600px) {
-            .grid-topicos {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                grid-template-areas:
-                    "web"
-                    "html"
-                    "css"
-                    "position"
-                    "flex"
-                    "bola";
-            }
-            .grid-topicos a { min-height: 70px; align-items: center; justify-content: center; }
-            .bola-wrap { flex-direction: row; justify-content: center; gap: 20px; padding: 10px 0; }
-        }
     </style>
 </head>
 <body>
-<!--Autor: [Victor Junkes] - Criado em 21/09/2026-->
+<!--Autor: Victor Junkes - Criado em 21/09/2026-->
 
     <h1>Conteúdos estudados em PPI</h1>
-    <p>Site responsivo com links para os materiais de cada tópico. Redimensione a janela (ou abra no
-    celular) para ver o grid virar uma lista vertical abaixo de 600px de largura.</p>
+    <p>Site com links para os materiais de cada tópico. O grid usa <code>fr</code>, então as colunas se
+    ajustam à largura da tela. A versão para celular está no <a href="5b.html">5b.html</a>.</p>
 
     <div class="grid-topicos">
         <a class="web" href="../ListaHTML/1.html">WEB</a>

@@ -15,7 +15,3 @@ Instituto Federal de Santa Catarina (IFSC), professor Romulo Beninca.
 ## Como visualizar
 
 Abra qualquer um dos arquivos `.html` diretamente no navegador.
-
-## Comentário sobre a experiência
-
-[Escreva aqui o que você achou de fazer essa lista.]

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="200" viewBox="0 0 450 200" font-family="Arial, sans-serif">
+  <rect width="450" height="200" fill="#ffffff"/>
+  <rect x="10" y="60" width="120" height="80" rx="8" fill="#00aeff"/>
+  <text x="70" y="97" font-size="15" fill="#fff" text-anchor="middle" font-weight="bold">Cliente</text>
+  <text x="70" y="117" font-size="12" fill="#fff" text-anchor="middle">navegador</text>
+  <rect x="320" y="60" width="120" height="80" rx="8" fill="#ffc107"/>
+  <text x="380" y="97" font-size="15" fill="#222" text-anchor="middle" font-weight="bold">Servidor</text>
+  <text x="380" y="117" font-size="12" fill="#222" text-anchor="middle">web</text>
+  <path d="M135 80 H312" stroke="#222" stroke-width="2" fill="none"/>
+  <path d="M312 80 l-9 -5 v10 z" fill="#222"/>
+  <text x="225" y="70" font-size="12" text-anchor="middle">1. request (GET /pagina.html)</text>
+  <path d="M315 122 H138" stroke="#222" stroke-width="2" stroke-dasharray="6 4" fill="none"/>
+  <path d="M138 122 l9 -5 v10 z" fill="#222"/>
+  <text x="225" y="142" font-size="12" text-anchor="middle">2. response (200 OK + HTML)</text>
+</svg>
