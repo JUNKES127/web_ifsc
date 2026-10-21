@@ -1,73 +1,68 @@
-//no navegador o js tem window
-console.log(window.screen)
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <div>
+        <label for="idPeso">Peso (kg)</label>
+        <input type="text" id="idPeso">
+        <br>
+        <label for="idAltura">Altura (m)</label>
+        <input type="text" id="idAltura">
+        <button id="botao">Calcular</button>
+        <p id="resultado"></p>
+        <img id="imagemImc" alt="Classificação do IMC" width="200" height="400" style="display: none;">
+    </div>
 
-window.document.body.innerHTML = "<p> OLÀ</p>"
-
-document.body.style.backgroundColor = "yellow"
-
-let div = document.createElement("div");
-
-let pnome = document.createElement("p");
-
-pnome.innerHTML= "Informe seu nome "
-
-div.appendChild(pnome);
-
-document.body.appendChild(div);
-
-div.appendChild(document.createElement("input"))
-
-
-
-let pAltura = document.createElement("p")
-
-pAltura.innerHTML = "Informe sua altura"
-
-div.appendChild(pAltura);
-temp = document.createElement("input")
-temp.id = "inputAltura"
-
-div.appendChild(temp)
+    <script src="script.js"></script>
+</body>
+</html>
 
 
+const botao = document.getElementById("botao");
 
-let pPeso = document.createElement("p")
+botao.addEventListener("click", function () {
+    const peso = parseFloat(document.getElementById("idPeso").value.replace(",", "."));
+    const altura = parseFloat(document.getElementById("idAltura").value.replace(",", "."));
+    const resultado = document.getElementById("resultado");
+    const imagem = document.getElementById("imagemImc");
 
-pPeso.innerHTML = "Informe seu peso"
+    if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        resultado.textContent = "Preencha peso e altura com valores válidos.";
+        imagem.style.display = "none";
+        return;
+    }
 
-div.appendChild(pPeso);
-temp = document.createElement("input")
-temp.id = "inputPeso"
+    const imc = peso / (altura * altura);
 
-div.appendChild(temp)
+    let classificacao;
+    let arquivo;
 
+    if (imc < 18.5) {
+        classificacao = "Abaixo do peso";
+        arquivo = "abaixopeso.png";
+    } else if (imc < 25) {
+        classificacao = "Peso normal";
+        arquivo = "normal.png";
+    } else if (imc < 30) {
+        classificacao = "Sobrepeso";
+        arquivo = "sobrepeso.png";
+    } else if (imc < 35) {
+        classificacao = "Obesidade grau I";
+        arquivo = "obesidade1.png";
+    } else if (imc < 40) {
+        classificacao = "Obesidade grau II";
+        arquivo = "obesidade2.png";
+    } else {
+        classificacao = "Obesidade grau III";
+        arquivo = "obesidade3.png";
+    }
 
+    resultado.textContent = "Seu IMC é " + imc.toFixed(2) + " (" + classificacao + ")";
 
-//adicionando botao
-div.appendChild(document.createElement("br"))
-
-tmp=document.createElement("button");
-
-tmp.id = "btnCalcular"
-
-tmp.innerHTML = "calcular"
-
-div.append(tmp)
-
-
-tmp.addEventListener("click", () =>{
-inputPeso=document.getElementById("inputPeso")
-inputAltura=document.getElementById("inputAltura")
-peso=Number.parseFloat(inputPeso.value)
-altura=Number.parseFloat(inputAltura.value)
-imc = peso/(altura * altura);
-console.log(imc)
-
-
-result = document.createElement("p");
-result.innerHTML = imc;
-div.appendChild(result);
-
-
-
-})
+    imagem.src = "images/" + arquivo;
+    imagem.style.display = "block";
+});
